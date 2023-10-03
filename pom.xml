@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    
+    <groupId>com.example</groupId>
+    <artifactId>my-webapp</artifactId>
+    <version>1.0.0</version>
+    <packaging>war</packaging>
+    
+    <name>My Web Application</name>
+    <description>A simple Java web application with WAR packaging</description>
+    
+    <!-- Dependencies -->
+    <dependencies>
+        <!-- Servlet API for Java EE web applications -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- Other web application dependencies go here -->
+    </dependencies>
+    
+    <!-- Build configuration for the WAR -->
+    <build>
+        <finalName>my-webapp</finalName>
+        <plugins>
+            <!-- Maven WAR Plugin configuration -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.1</version>
+                <configuration>
+                    <!-- Configure web application packaging -->
+                    <warSourceDirectory>src/main/webapp</warSourceDirectory>
+                    <!-- Additional configuration options go here -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
